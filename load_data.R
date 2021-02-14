@@ -1,0 +1,12 @@
+#Load calendar data
+calendar <- read_csv(file="data/calendar_summary.csv")
+#Load listings data
+listings <- read_csv(file="data/listings.csv")
+#Load listings_summary data
+listings_summary <- read_csv(file="data/listings_summary.csv")
+#Load neighbourhoods data
+neighbourhoods <- read_csv(file="data/neighbourhoods.csv")
+#Load reviews data
+reviews <- read_csv(file="data/reviews.csv")
+#Load reviews_summary data
+reviews_summary <- read_csv(file="data/reviews_summary.csv")

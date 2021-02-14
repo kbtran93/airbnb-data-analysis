@@ -8,24 +8,73 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+Research question:
 
 ## Loading libraries
 ```{r}
 source('load_libraries.R')
 ```
-
-
-
-```{r cars}
-summary(cars)
+## Loading data
+```{r}
+source('load_data.R')
+```
+# Define functions
+```{r}
+basic_eda <- function(data)
+{
+  glimpse(data)
+  print(status(data))
+  freq(data) 
+  print(profiling_num(data))
+  plot_num(data)
+  describe(data)
+}
+```
+#Initial look at the data
+```{r}
+# Fetch listings information
+str(listings)
+```
+```{r}
+# Display number of rows and columns
+cat("Number of rows: ", nrow(listings),"\n")
+cat("Number of columns: ", ncol(listings),"\n")
+# Display dimensions
+cat("Dimension: ",  dim(listings))
+# Display columns name
+names(listings)
+```
+The listings dataframe has 22552 rows and 16 columns.
+```{r}
+#Calculate number of NULL rows
+na_count_listings <- sapply(listings, function(y) sum(length(which(is.na(y)))))
+na_count_listings <- data.frame(na_count_listings)
+na_count_listings
 ```
 
-## Including Plots
+There are 4 columns with NULL values:
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+name = 59 rows
+host_name = 26 rows
+last_reviews = 3,908 rows
+reviews_per_month = 3,914 rows
+```{r}
+#Calculate number of rows with unicode texts
+unicode_count_listings <- sapply(listings, function(y) length(which(grepl("[[:cntrl:]]", stringi::stri_enc_toascii(y)) == TRUE)))
+unicode_count_listings <- data.frame(unicode_count_listings)
+unicode_count_listings
 ```
+There are 4 columns with unicode texts, which are:
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+name = 5,477 rows
+host_name = 508 rows
+neighbourhood_group = 5,654 rows
+neighbourhood = 10,377 rows
+```{r}
+sapply(listings, class)
+```
+```{r}
+summary(listings$price)
+```
+75% of properties have a price that is $70 or lower and the max price is $9000. There might be outliers.
+
