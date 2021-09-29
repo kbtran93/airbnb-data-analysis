@@ -5,7 +5,7 @@
 
 - [Installation](#installation)
 - [Research Questions](#questions)
-- [File Descriptions](#description)
+- [Data](#data)
 
 ## Installation<a name="installation"></a>
 
@@ -23,16 +23,7 @@ This project is executed by Jupyter Notebook using Python 3 coding. These packag
 - What factors influence the price most?
 
 
-## File Descriptions<a name="description"></a>
+## Data<a name="data"></a>
 
-`airbnb_analysis.ipynb`:  
-The Jupyter Notebook which contains the code and the model intepretations.
-
-`calendar.zip`:  
-contains calendar.csv - data such as availability, dates, price for the upcoming year
-
-`listings.zip`:  
-contains listings.csv - data of the listings
-
-`reviews.zip`:  
-contains reviews.csv - unique id for each reviewer and detailed comments
+The used datasets were created on November 25th, 2019 and contain detailed listings data, review data and calendar data of current Airbnb listings in Munich, Germany. This data was created by Murray Cox and his Inside Airbnb project which can be found here: http://insideairbnb.com/get-the-data.html
+Alternatively, the dataset can be obtained from: https://www.kaggle.com/chriskue/munich-airbnb-data
