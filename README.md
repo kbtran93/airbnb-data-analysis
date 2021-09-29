@@ -1,5 +1,5 @@
 # Airbnb Data Analysis
-![alt text](https://pluspng.com/img-png/airbnb-logo-png-logo-of-airbnb-airbnb-see-more-195.png)
+![alt text](https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpluspng.com%2Fimg-png%2Fairbnb-logo-png-is-airbnb-safe-what-the-homestay-app-does-to-make-hosts-and-guests-secure-in-their-use-780.png)
 
 ### Table of Contents
 
