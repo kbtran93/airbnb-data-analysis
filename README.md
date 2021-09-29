@@ -27,4 +27,4 @@ This project is executed by Jupyter Notebook using Python 3 coding. These packag
 
 The used datasets were created on November 25th, 2019 and contain detailed listings data, review data and calendar data of current Airbnb listings in Munich, Germany. This data was created by Murray Cox and his Inside Airbnb project which can be found here: http://insideairbnb.com/get-the-data.html
 
-Alternatively, the dataset can be obtained from: https://www.kaggle.com/chriskue/munich-airbnb-data
+Alternatively, the datasets can be obtained from: https://www.kaggle.com/chriskue/munich-airbnb-data
